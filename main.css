@@ -1,12 +1,24 @@
 body {
 	background: teal;
+  font-family: Impact, Charcoal, sans-serif;
 }
 
 h1 {
-	font-family: Impact, Charcoal, sans-serif;
 	font-style: italic;
 	text-align: center;
 	font-size: 5em;
+  margin: .5% 0 -.5% 0;
+}
+
+p {
+  font-style: italic;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
 }
 
 .btn {
@@ -21,8 +33,7 @@ h1 {
   border-radius: 15px;
   font-family: Arial;
   color: #f2f224;
-  font-size: 27px;
-  padding: 9px 20px 10px 20px;
+  font-size: 17px;
   text-decoration: none;
 }
 
@@ -36,23 +47,28 @@ h1 {
   text-decoration: none;
 }
 
+#planetHolder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .planetBox {
 	border: solid black 2px;
-	display: inline-block;
-	height: 300px;
-	width: 300px;
+	height: 250px;
+	width: 250px;
 	margin: 20px;
   border-radius: 5%;
 }
 
 .planetName {
 	color: white;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 126px;
-    width: inherit;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 100px;
+  width: inherit;
 }
 
 .planetImage {

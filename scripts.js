@@ -1,8 +1,10 @@
-// calls a function, and adds any string i want to the div, using innerHTML
+////////////////////// REFERENCES ///////////////////
 
 var showButton = document.getElementById("showPlanets");
 var clearButton = document.getElementById("clearAll");
 var planetHolderDiv = document.getElementById("planetHolder");
+
+/////////////////////// ARRAY ////////////////////////
 
 var planets = [
 {
@@ -38,8 +40,17 @@ var planets = [
 	url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/260px-Neptune_Full.jpg"
 }];
 
+
+/////////////////////// EVENT LISTENERS /////////////////
+
 showButton.addEventListener("click", populatePage);
 clearButton.addEventListener("click", cleanUp);
+showButton.addEventListener("mouseenter", populatePage);
+clearButton.addEventListener("mouseenter", cleanUp);
+document.body.addEventListener("click", showPlanetName);
+
+
+/////////////////////// FUNCTIONS ///////////////////////
 
 function populatePage() {
 	planetHolderDiv.innerHTML = "";
@@ -59,17 +70,9 @@ function cleanUp() {
 
 function showPlanetName(event){
 	if(event.target.className === 'planetImage'){
-	console.log("event worked", event);
-	// console.log("unique ID", event.target.parentNode.id)
-	console.log("text?", event.target.previousSibling);
+	// event.target.parentNode.id method used to tunnel
+	// event.target.previousSibling method used to tunnel
 	event.target.previousSibling.classList.toggle('hidden');
 	}
 }
-
-showButton.addEventListener("mouseenter", populatePage);
-// showButton.addEventListener("mouseleave", cleanUp);
-
-document.body.addEventListener("click", showPlanetName);
-
-
 
