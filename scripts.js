@@ -40,7 +40,6 @@ var planets = [
 	url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/260px-Neptune_Full.jpg"
 }];
 
-
 /////////////////////// EVENT LISTENERS /////////////////
 
 showButton.addEventListener("click", populatePage);
