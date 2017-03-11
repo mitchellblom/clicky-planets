@@ -70,8 +70,6 @@ function cleanUp() {
 
 function showPlanetName(event){
 	if(event.target.className === 'planetImage'){
-	// event.target.parentNode.id method used to tunnel
-	// event.target.previousSibling method used to tunnel
 	event.target.previousSibling.classList.toggle('hidden');
 	}
 }
